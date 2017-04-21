@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/bg.jpg);
+    background-size: cover;
+    -webkit-filter: grayscale() blur(2px);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2
+}
+
+.ysers-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yser {
+    width: 100%;
+    max-width: 300px;
+}
+
+.yser-pic {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: 200%;
+}
+
+.yser p {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0.5em !important;
+    font-size: 4em;
+}
+
+.yser-name {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    margin-top: 0.5em;
+    font-weight: 200;
+}
+
+.nav {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.view {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
