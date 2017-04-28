@@ -1,17 +1,22 @@
 html, body {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
+    background: #F2F2F2;
+    position: relative;
+}
+
+.App {
+    position: relative;
 }
 
 .bg {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url(/bg.jpg);
-    background-size: cover;
-    -webkit-filter: grayscale() blur(2px);
+    background-size: contain;
+    background-repeat: repeat-y;
+    filter: grayscale() blur(3px);
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     opacity: 0.2
 }
 
@@ -23,14 +28,14 @@ html, body {
 
 .yser {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .yser-pic {
     width: 100%;
     height: 400px;
     background-position: center;
-    background-size: 200%;
+    background-size: cover;
 }
 
 .yser p {
@@ -50,10 +55,15 @@ html, body {
     font-weight: 200;
 }
 
+.yser-surname {
+    font-size: 1.5em;
+}
+
 .nav {
     position: absolute;
     top: 1em;
     right: 1em;
+    z-index: 2;
 }
 
 .view {
@@ -62,4 +72,96 @@ html, body {
     align-content: center;
     flex-direction: column;
     height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.Admin {
+    padding: 0 10%;
+    padding-top: 5em;
+    z-index: 1;
+    position: relative;
+}
+
+.title-input {
+    height: 2em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #A0A0A0;
+    font-size: 3em !important;
+    width: 100%;
+    padding: 0;
+    color: #101010;
+}
+
+.title-input:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.title-input::-webkit-input-placeholder {
+    color: #A0A0A0;
+}
+
+.reset {
+    padding: 1em 2em;
+    font-size: 1.5em;
+    background: none;
+    border: 2px solid #A0A0A0;
+    color: #A0A0A0;
+    border-radius: 20px;
+}
+
+.reset:active {
+    border: 2px solid #101010;
+    color: #101010;
+}
+
+.reset:focus {
+    outline: 0;
+}
+
+.admin-middle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-selected {
+    margin-left: 0.5em;
+    font-size: 7em;
+    color: #A0A0A0;
+}
+
+.admin-ysers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.admin-yser {
+    width: 100px;
+    height: 200px;
+    margin: 2em 0.5em;
+    position: relative;
+}
+
+.admin-yser > .admin-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.admin-bg.disabled {
+    filter: grayscale() blur(0.8px);    
+}
+
+.admin-yser-surname {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: 200;
+    font-size: 1.3em;
 }
