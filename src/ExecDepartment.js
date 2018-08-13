@@ -8,15 +8,17 @@ class ExecDepartment extends Component {
     return (
       <div className="view">
             <div>
-                <h1 className="title">Executive Department</h1>
+                <h1 className="title">{this.props.title}</h1>
             </div>
 
             <div className="ysers-container">
-                <ExecCard
-                    firstName={'Peter'}
-                    lastName={'Rupa'}
-                    image={'/pic/rupa.jpg'}
-                />
+                {this.props.ysers.map(yser => 
+                  <ExecCard
+                        firstName={yser.firstName}
+                        lastName={yser.lastName}
+                        image={'/pic/' + yser.lastName.toLowerCase() + '.jpg'}
+                    />  
+                )}
             </div>
         </div>
     );
